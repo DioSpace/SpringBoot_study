@@ -2,7 +2,6 @@ package com.my.controller;
 
 import com.my.entity.User;
 import com.my.service.UserService;
-import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,11 +15,9 @@ public class UserController {
 
     @GetMapping("queryUser")
     public List<User> queryUser() {
-        List<User> users = userService.queryUser();
-        return users;
+        return userService.queryUser();
     }
 
-    //username, birthday, sex, address
     @PostMapping("addUser")
     public String add(@RequestParam("username") String username,
                       @RequestParam("birthday") Date birthday,
