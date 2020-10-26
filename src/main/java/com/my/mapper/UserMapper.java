@@ -10,4 +10,12 @@ import java.util.List;
 @Repository //把mapper接口注册为spring的bean，避免@autowired时爆红（无影响）
 public interface UserMapper {
     public List<User> queryUserList();
+
+    public void addUser(User user);
+
+    public void deleteUser(int id);
+
+    public void updateUser(int id, String address);
+
+    public User queryUser(int id);
 }

@@ -16,4 +16,24 @@
         <include refid="Base_Column_List"/>
         from user
     </select>
+
+    <!-- 增 -->
+    <insert id="addUser" parameterType="com.my.entity.User">
+        insert into user (username, birthday, sex, address) value (#{username},#{birthday},#{sex},#{address})
+    </insert>
+
+    <!-- 删 -->
+    <delete id="deleteUser" parameterType="int">
+        delete from user where id = #{id}
+    </delete>
+
+    <!-- 改 -->
+    <update id="updateUser">
+        update user set address=#{address} where id=#{id}
+    </update>
+
+    <!-- 查 -->
+    <select id="queryUser" resultType="User">
+        select * from  user where id = #{id}
+    </select>
 </mapper>

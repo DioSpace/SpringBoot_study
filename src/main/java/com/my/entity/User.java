@@ -6,7 +6,7 @@ public class User {
     private int id;
     private String username;
     private Date birthday;
-    private String sex;
+    private int sex;
     private String address;
 
     public int getId() {
@@ -33,11 +33,11 @@ public class User {
         this.birthday = birthday;
     }
 
-    public String getSex() {
+    public int getSex() {
         return sex;
     }
 
-    public void setSex(String sex) {
+    public void setSex(int sex) {
         this.sex = sex;
     }
 
